@@ -14,5 +14,5 @@ const User = (sequelize, DataTypes) => {
 
     return User;
 };
-// req02
+
 module.exports = User;

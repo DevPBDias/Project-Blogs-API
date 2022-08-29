@@ -6,5 +6,5 @@ const Category = (sequelize, DataTypes) => {
 
     return Category;
 };
-// req7
+
 module.exports = Category;

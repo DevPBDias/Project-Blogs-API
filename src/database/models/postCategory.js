@@ -22,5 +22,5 @@ const PostCategory = (sequelize, DataTypes) => {
 
     return PostCategory;
 };
-// req11
+
 module.exports = PostCategory;

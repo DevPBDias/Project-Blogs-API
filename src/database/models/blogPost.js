@@ -15,5 +15,5 @@ const BlogPost = (sequelize, DataTypes) => {
 
     return BlogPost;
 };
-// req10
+
 module.exports = BlogPost;
