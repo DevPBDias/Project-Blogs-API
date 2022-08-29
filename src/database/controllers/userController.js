@@ -4,15 +4,14 @@ const { User } = require('../models');
 
 const { JWT_SECRET } = process.env;
 
-const getAllUser = async (req, res) => {
+const getAllUser = async (_req, res, _next) => {
     try {
-        const { displayName, email, password, image } = req.body;
-        const token = jwt.sign({ displayName, email, password, image }, JWT_SECRET);
-        return res.status(200).json({ token });
-    } catch (err) {
-        return res.status(500).json({ message: 'Deu erro no getAllUser' });
+      const result = await userService.getUserAll();
+      return res.status(200).json(result);
+    } catch (error) {
+      return res.status(500).json({ message: 'Deu erro no getAllUser' });
     }
-};
+  };
 
 const createUser = async (req, res) => {
     try {
